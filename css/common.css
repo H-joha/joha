@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'GoryeongStrawberry';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/GoryeongStrawberry.eot);
+  src: url(../fonts/GoryeongStrawberry.eot?#iefix) format('embedded-opentype'), 
+  url(../fonts/GoryeongStrawberry.woff) format('woff'), 
+  url(../fonts/GoryeongStrawberry.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SBAggroB';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/SBAggroB.eot);
+  src: url(../fonts/SBAggroB.eot?#iefix) format('embedded-opentype'), 
+  url(../fonts/SBAggroB.woff) format('woff'), 
+  url(../fonts/SBAggroB.ttf) format('truetype');
+}
+
+/* 폰트 브라우저 비율 설정 */
+html { font-size: 62.5%; }
+
+/* 포인트 폰트 */
+:root {
+  --color-point01: #A8A2E0;
+  --color-point02: #2c9b78;
+  --color-point03: #fbf4a4;
+  --color-point04: #3a466a;
+  --color-point05: #b4450e;
+  --color-point06: #c8a666;
+  --color-point07: #341c3c;
+  --color-point08: #1ecad3;
+}
+
+/* 반응형, 모바일에서 모든요소의 패딩,선을 크기안에 포함시킴 */
+*,:before,:after { box-sizing: border-box; }
+
+/* body에 들어갈수있는 모든태그의 여백빼기 */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,code,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section,main,audio,video { margin: 0; padding: 0; }
+
+/* html5추가 시멘틱엘리먼트를 익스하위버전에서 블럭으로 인식되도록함 */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main { display: block; }
+
+/* button태그에 손모양 커서 */
+button {  cursor: pointer; }
+/* 익스하위버전에서 이미지 선없애기 */
+fieldset,img { border: 0; vertical-align: top; }
+
+/* 모바일, 반응형에서 이미지가 원본보다 커지지않게함 */
+img { max-width: 100%; }
+/* 리스트 기호 빼기 */
+ol,ul { list-style: none; }
+/* 태그 기본 기울임꼴 제거 */
+address,em { font-style: normal; }
+strong { font-weight: normal; }
+/* 벤더프리픽스: 브라우저 제조사를 의미 */
+/* -webkit- 크롬, 사파리, 다른브라우저에서 사용하기도함 */
+a { text-decoration: none; color: #222; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); }
+/* iframe으로 외부컨텐츠를 연결했을때 외부컨텐츠안쪽내용이 우리페이지에 영향을 주지못하도록 가려줌*/
+iframe { overflow: hidden; border: 0; }
+/* 칸의 선을 합치기, 칸의 간격없애기, 가로를 늘려줌 */
+table { border-collapse: collapse; border-spacing: 0; width: 100%; table-layout: fixed; }
+/* 굵기 빼고 헤딩태그 폰트크기를 body에 선언한 크기와 일치시킴 */
+h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 100%; }
+/* 폼요소의 높이가 다를때 요소끼리 세로정렬시킴, ios 둥근모서리, 기본스타일 제거 */
+/* border-radius:0 -> iOS에서 테두리가 둥글게 나오므로 빼줌 */
+/* -webkit-appearance: none -> iOS에서 폼요소에 내부그림자가 나오므로 빼줌 */
+input,select,textarea,button { vertical-align: middle; margin: 0; padding: 0; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); }
+
+/* textarea 리사이즈기능 빼기 */
+textarea { resize: none; }
+
+/* 모바일 크롬, 사파리의 텍스트 자동확대 방지*/
+body { -webkit-text-size-adjust: none; }
+
+
+
+
+/*********************** 공통스타일 *************************/
+/* body 스크롤바 숨기기 */
+body.on { overflow: hidden; }
+/* body.on { overflow: hidden; position: fixed; left:0; top:0; width:100%; } */
+
+body,input,button,select,textarea,table {
+  font-family: 'Noto Sans KR', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Skip Navgation */
+#skip_navi { position: relative; }
+#skip_navi a {
+  position: absolute;
+  left: 0;
+  top: -999px;
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  z-index: 99999;
+  text-align: center;
+}
+#skip_navi a:hover,#skip_navi a:active,#skip_navi a:focus { top: 0; }
+
+/* legend,caption,메뉴제목,섹션제목 블라인드 */
+legend,caption,.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+/* float해제 */
+.clearfix:after { content: ''; display: block; clear: both; }
+
+/* placeholder */
+::-webkit-input-placeholder { color: #bbbbbb; } /* Webkit,크롬,사파리 */
+:-moz-placeholder { color: #bbbbbb; } /* Firefox 4-18 */
+::-moz-placeholder { color: #bbbbbb; opacity: 1; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #bbbbbb !important; } /* IE10+ */
+
+/* 폼요소 공통 */
+/* IE x버튼, password 눈모양 안보이게 */
+input::-ms-clear,input::-ms-reveal { display: none; }
+
+/* input search x버튼 안보이게 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* 화살표제거 */
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+/* 익스 화살표 제거 */
+select::-ms-expand { display: none; }
+
+/* 애니메이션 공통 */
+.animate_01 { 
+  transform: translate(0, -100%);
+  transition: all 1s;
+  opacity: 0;
+}
+.animate_02 { 
+  transform: translate(0, 100%);
+  transition: all 1s;
+  opacity: 0;
+}
+.animate_03 { 
+  transform: rotateY(180deg);
+  transition: all 3s 1s;
+  opacity: 0;
+}
+.animate_04 { 
+  transform: rotateY(180deg);
+  transition: all 3s 2s;
+  opacity: 0;
+}
+.animate_05 { 
+  transform: rotateY(180deg);
+  transition: all 3s 3s;
+  opacity: 0;
+}
+.animate_06 { 
+  transform: rotateY(180deg);
+  transition: all 3s 4s;
+  opacity: 0;
+}
+
+[class*='animate_'].active {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0);
+}
+
+
+
+
+#wrap { min-width: 320px; }
+
+
+
+
+
+
+
+
+/* 타블렛 분기점 */
+@media (max-width:1024px) {
+
+
+}
+
+
+/* 모바일 분기점 */
+@media (max-width:776px) {
+
+
+}

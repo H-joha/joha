@@ -188,7 +188,11 @@ select::-ms-expand { display: none; }
   top: 0;
   z-index: 9999;
   width: 100%;
+  transform: translateY(-100%);
+  transition: all 0.8s;
 }
+#header.fixed { transform: translateY(0%); }
+
 #header .inner {
   padding: 0 20px;
   display: flex;

@@ -1,5 +1,5 @@
 $(function () {
-  // header fixed 클래스
+  // header fixed
   $(window).on('scroll', function () {
     var st = $(this).scrollTop();
 

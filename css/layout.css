@@ -5,3 +5,9 @@
     border: 2px solid red;
     height: 100vh;
 }
+
+/* 프로필 */
+.main_about {
+    border: 2px solid yellowgreen;
+    padding: 100px 0;
+}

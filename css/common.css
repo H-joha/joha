@@ -181,6 +181,38 @@ select::-ms-expand { display: none; }
 
 #wrap { min-width: 320px; }
 
+#header {
+  background: orange;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+#header .inner {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo a {
+  border: 2px solid black;
+  padding: 0 20px;
+  font-family: 'SBAggroB', sans-serif;
+  font-size: 20px;
+}
+
+#header .menu { display: flex; }
+#header .menu>li { margin: 0 20px; }
+#header .menu>li>a {
+  border: 2px solid yellowgreen;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-family: 'SBAggroB', sans-serif;
+  font-size: 20px;
+}
 
 
 

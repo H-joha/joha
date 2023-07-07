@@ -1,15 +1,4 @@
 $(function () {
-  // header fixed
-  $(window).on('scroll', function () {
-    var st = $(this).scrollTop();
-
-    if (st > 0) {
-      $('#header').addClass('fixed');
-    } else {
-      $('#header').removeClass('fixed');
-    }
-  });
-
   // header menu 이동
   $('#header .menu>li').on('click', function (e) {
     e.preventDefault();
@@ -21,30 +10,12 @@ $(function () {
     });
   });
 
-  // ABOUT 애니메이션
-  $('[class*=animate_]').each(function () {
-    var _this = $(this);
-    $(window).on('scroll', function () {
-      var posY = _this.offset().top;
-      var st = $(this).scrollTop();
-      var tagH = $('.main_about .tag_wrap .tag').outerHeight();
-
-      if (st >= posY - $(this).outerHeight() - 600) {
-        _this.addClass('active');
-      } else if (st >= $(this).outerHeight() + tagH) {
-        $('.main_about .tag_wrap .tag').addClass('active');
-      } else {
-        _this.removeClass('active');
-      }
-    });
-  });
-
   // skill 애니메이션 효과
   draw(91, '.circle01', '#78c2c2');
   draw(90, '.circle02', '#78c2c2');
-  draw(68, '.circle03', '#78c2c2');
-  draw(74, '.circle04', '#78c2c2');
-  draw(30, '.circle05', '#78c2c2');
+  draw(64, '.circle03', '#78c2c2');
+  draw(78, '.circle04', '#78c2c2');
+  draw(40, '.circle05', '#78c2c2');
 
   function draw(max, classname, colorname) {
     var i = 1;

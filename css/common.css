@@ -182,45 +182,68 @@ select::-ms-expand { display: none; }
 #wrap { min-width: 320px; }
 
 #header {
-  background: orange;
   position: fixed;
-  left: 0;
-  top: 0;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 9999;
-  width: 100%;
-  transform: translateY(-100%);
-  transition: all 0.8s;
+  width: 180px;
 }
-#header.fixed { transform: translateY(0%); }
-
-#header .inner {
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#header .menu {
+  background: #888;
+  border-radius: 10px 0 0 10px;
 }
-
-#header .logo a {
-  border: 2px solid black;
-  padding: 0 20px;
-  font-family: 'SBAggroB', sans-serif;
-  font-size: 20px;
-}
-
-#header .menu { display: flex; }
-#header .menu>li { margin: 0 20px; }
+#header .menu>li { text-align: center; }
 #header .menu>li>a {
-  border: 2px solid yellowgreen;
-  display: block;
+  position: relative;
+  display: inline-block;
   line-height: 80px;
-  padding: 0 20px;
   font-family: 'SBAggroB', sans-serif;
-  font-size: 20px;
+  font-size: 2.0rem;
+  text-align: center;
+}
+#header .menu>li>a:hover { color: #fff; }
+#header .menu>li>a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.5s;
+}
+#header .menu>li>a:hover:after { transform: translateX(-50%) scaleX(1); }
+
+#header .bg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  background: #ddd;
+  width: 200px;
+  height: 98%;
+  border-radius: 10px 0 0 10px;
 }
 
 
 
-
+/* ========== 섹션 공통 ========== */
+section .inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.main_tit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: 'GoryeongStrawberry', sans-serif;
+  font-size: 8.0rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #888;
+}
 
 
 

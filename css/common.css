@@ -145,32 +145,6 @@ select::-ms-expand { display: none; }
   transition: all 1s;
   opacity: 0;
 }
-.animate_02 { 
-  transform: translate(0, 100%);
-  transition: all 1s;
-  opacity: 0;
-}
-.animate_03 { 
-  transform: rotateY(180deg);
-  transition: all 3s 1s;
-  opacity: 0;
-}
-.animate_04 { 
-  transform: rotateY(180deg);
-  transition: all 3s 2s;
-  opacity: 0;
-}
-.animate_05 { 
-  transform: rotateY(180deg);
-  transition: all 3s 3s;
-  opacity: 0;
-}
-.animate_06 { 
-  transform: rotateY(180deg);
-  transition: all 3s 4s;
-  opacity: 0;
-}
-
 [class*='animate_'].active {
   opacity: 1;
   transform: translate(0, 0) rotate(0);
@@ -183,27 +157,59 @@ select::-ms-expand { display: none; }
 
 #header {
   position: fixed;
-  right: 0%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
+  bottom: 0;
   z-index: 9999;
   width: 150px;
 }
-#header .menu {
+#header .mymenu {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(90%, -50%);
+  z-index: 100;
+  width: 100%;
+  transition: all 0.5s;
+}
+#header .mymenu:hover { transform: translate(0%, -50%);; }
+
+#header .mymenu:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background: #2c9b78;
+  width: 170px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+#header .mymenu .ico_arrow {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+}
+
+#header .mymenu .menu {
   background: #78c2c2;
   border-radius: 20px 0 0 20px;
 }
-#header .menu>li { text-align: center; }
-#header .menu>li>a {
-  position: relative;
+#header .mymenu .menu>li { text-align: center; }
+#header .mymenu .menu>li>a {
   display: inline-block;
   line-height: 80px;
   font-family: 'SBAggroB', sans-serif;
   font-size: 2.0rem;
   text-align: center;
+  position: relative;
 }
-#header .menu>li>a:hover { color: #fff; }
-#header .menu>li>a:after {
+#header .mymenu .menu>li>a:hover { color: #fff; }
+#header .mymenu .menu>li>a:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -214,25 +220,14 @@ select::-ms-expand { display: none; }
   background: #fff;
   transition: all 0.5s;
 }
-#header .menu>li>a:hover:after { transform: translateX(-50%) scaleX(1); }
-
-#header .bg {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-  background: #2c9b78;
-  width: 160px;
-  height: 95%;
-  border-radius: 20px 0 0 20px;
-}
+#header .mymenu .menu>li>a:hover:after { transform: translateX(-50%) scaleX(1); }
 
 
 
 /* ========== 섹션 공통 ========== */
 section .inner {
   max-width: 1280px;
+  min-width: 320px;
   margin: 0 auto;
 }
 .main_tit {

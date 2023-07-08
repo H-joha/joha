@@ -27,6 +27,7 @@
 
 /* 이미지 */
 .main_intro .img_wrap {
+  position: relative;
   border: 2px solid #78c2c2;
   width: 300px;
   height: 300px;
@@ -34,7 +35,29 @@
   margin: 0 auto;
   overflow: hidden;
 }
+/* 이미지 로딩 애니메이션 */
+.main_intro .img_wrap .loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: loader 3s steps(1000) forwards;
+}
+@keyframes loader {
+  0% { 
+    transform: translateY(0%);
+  }
+  50% { 
+    transform: translateY(50%);
+  }
+  100% { 
+    transform: translateY(100%);
+  }
+}
 
+/* 소개문구 */
 .main_intro .txt_wrap { margin-top: 50px; }
 .main_intro .txt_wrap br { display: none; }
 .main_intro .txt_wrap .tit {

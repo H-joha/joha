@@ -81,7 +81,6 @@
 .main_about { padding: 100px 0 150px; }
 .main_about .inner {
   display: flex; 
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -125,9 +124,10 @@
   width: 40%;
   display: flex;
   flex-wrap: wrap;
-  padding: 15px 0;
+  padding-top: 50px;
+  padding-right: 50px;
 }
-.main_about .tag_wrap .tag { 
+.main_about .tag_wrap .tag {
   width: 50%;
   text-align: center;
 }
@@ -142,7 +142,7 @@
   font-weight: 700;
   color: #2c9b78;
 }
-.main_about .tag_wrap .tag p { margin: 10px 0 50px; }
+.main_about .tag_wrap .tag p { margin: 10px 0; }
 
 /*  스킬 */
 .main_about .skill_wrap {

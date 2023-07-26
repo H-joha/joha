@@ -365,7 +365,7 @@
   /* 개인정보 */
   .main_about .about_wrap { 
     width: 100%;
-    padding-left: 0px;
+    padding-left: 40px;
   }
   .main_about .about_wrap .about + .about { margin-top: 10px; }
   .main_about .about_wrap .about .tit { font-size: 1.5rem; }
@@ -379,8 +379,7 @@
   /* 태그 */
   .main_about .tag_wrap {
     width: 100%;
-    padding-top: 30px;
-    padding-right: 0px;
+    padding: 30px 0 0 40px;
   }
   .main_about .tag_wrap .tit {
     display: inline-block;

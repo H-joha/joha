@@ -323,7 +323,6 @@
   /* 섹션 : 인트로 */
   .main_intro .inner {
     display: flex;
-    /* align-items: center; */
     flex-wrap: wrap;
     height: 100%;
     padding: 20px 20px 0;
@@ -345,7 +344,7 @@
   /* 소개문구 */
   .main_intro .txt_wrap {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .main_intro .txt_wrap br { display: block; }
   .main_intro .txt_wrap .tit { font-size: 1.8rem; }

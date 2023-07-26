@@ -321,7 +321,6 @@
 /* ========== 모바일 분기점 ========== */
 @media (max-width: 768px) {
   /* 섹션 : 인트로 */
-  .main_intro { height: auto; }
   .main_intro .inner {
     display: flex;
     align-items: center;

@@ -326,7 +326,7 @@
     align-items: center;
     flex-wrap: wrap;
     height: 100%;
-    /* padding: 20px 20px 20px; */
+    padding: 20px 20px 20px;
   }
   /* 소개문구 */
   .main_intro .tit_wrap { width: 100%;}

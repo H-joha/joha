@@ -155,6 +155,7 @@ select::-ms-expand { display: none; }
 
 #wrap { min-width: 320px; }
 
+/* 데스크탑 헤더 */
 #header {
   position: fixed;
   right: 0;
@@ -173,8 +174,7 @@ select::-ms-expand { display: none; }
   width: 100%;
   transition: all 0.5s;
 }
-#header .mymenu:hover { transform: translate(0%, -50%);; }
-
+#header .mymenu:hover { transform: translate(0%, -50%); }
 #header .mymenu:before {
   content: '';
   position: absolute;
@@ -194,7 +194,6 @@ select::-ms-expand { display: none; }
   width: 30px;
   height: 30px;
 }
-
 #header .mymenu .menu {
   background: #78c2c2;
   border-radius: 20px 0 0 20px;
@@ -222,7 +221,8 @@ select::-ms-expand { display: none; }
 }
 #header .mymenu .menu>li>a:hover:after { transform: translateX(-50%) scaleX(1); }
 
-
+/* 모바일 헤더 */
+#header .m_mymenu { display: none; }
 
 /* ========== 섹션 공통 ========== */
 section .inner {
@@ -251,6 +251,63 @@ section .inner {
 
 /* ========== 모바일 분기점 ========== */
 @media (max-width:776px) {
+  /* 데스크탑 헤더 */
+  #header .mymenu { display: none; }
+
+  /* 모바일 헤더 */
+  #header {
+    left: 0;
+    top: 0;
+    bottom: auto;
+    transform: translate(0 , 0);
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background: rgb(44, 155, 120, 0.8);
+  }
+  #header .logo {
+    line-height: 50px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+
+
+  #header .m_mymenu { display: block; }
+  #header .m_mymenu .m_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #header .m_mymenu .m_menu>li { margin: 0 10px; }
+  #header .m_mymenu .m_menu>li>a {
+    display: inline-block;
+    line-height: 50px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    position: relative;
+  }
+  #header .m_mymenu .m_menu>li>a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transform: scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: #fff;
+  }
+  #header .m_mymenu .m_menu>li>a:hover:after { 
+    transform: scaleX(1);
+    transition: all 0.5s;
+   }
+
+
+
+
+  
+  /* ========== 섹션 공통 ========== */
   .main_tit { font-size: 4.0rem; }
 
 }

@@ -342,15 +342,18 @@
     border: 1px solid #78c2c2;
     width: 250px;
     height: 250px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   /* 소개문구 */
-  .main_intro .txt_wrap { width: 100%; }
+  .main_intro .txt_wrap { 
+    width: 100%;
+    margin-top: 30px;
+  }
   .main_intro .txt_wrap br { display: block; }
   .main_intro .txt_wrap .tit { font-size: 1.8rem; }
   .main_intro .txt_wrap .txt { font-size: 1.5rem; }
   /* 이력서 다운로드 */
-  .main_intro .btn_wrap { margin: 30px auto 0; }
+  .main_intro .btn_wrap { margin: 10px auto 0; }
   .main_intro .btn_wrap .btn_download { font-size: 1.6rem; }
   .main_intro .btn_wrap .btn_download:hover { 
     border: none;

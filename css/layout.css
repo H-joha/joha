@@ -95,7 +95,7 @@
 }
 /* 개인정보 */
 .main_about .about_wrap { 
-  width: 60%; 
+  width: 60%;
   padding-left: 120px;
 }
 .main_about .about_wrap .about + .about { margin-top: 20px; }
@@ -473,11 +473,6 @@
     opacity: 0;
     visibility: hidden;
   }
-
-
-
-
-
 
 
 

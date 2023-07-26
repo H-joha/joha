@@ -1,6 +1,28 @@
 $(function () {
-  // header menu 이동
+  // 데스크탑header menu 이동
   $('#header .menu>li').on('click', function (e) {
+    e.preventDefault();
+
+    var idx = $(this).index();
+
+    $('html, body').animate({
+      scrollTop: $('#container>section').eq(idx).offset().top,
+    });
+  });
+
+  // 모바일 header
+  $('#header .m_mymenu .logo a').on('click', function (e) {
+    e.preventDefault();
+
+    $('#header .m_mymenu .m_menu').addClass('on');
+  });
+
+  $('#header .m_mymenu .m_menu .btn_close').on('click', function (e) {
+    $('#header .m_mymenu .m_menu').removeClass('on');
+  });
+
+  // 모바일 header menu 이동
+  $('#header .m_mymenu .m_menu>li').on('click', function (e) {
     e.preventDefault();
 
     var idx = $(this).index();

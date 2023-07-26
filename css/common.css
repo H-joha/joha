@@ -141,8 +141,8 @@ select::-ms-expand { display: none; }
 
 /* 애니메이션 공통 */
 .animate_01 { 
-  transform: translate(0, -100%);
-  transition: all 1s;
+  transform: rotate( 45deg );
+  transition: all ease 1s;
   opacity: 0;
 }
 [class*='animate_'].active {
@@ -194,6 +194,7 @@ select::-ms-expand { display: none; }
   width: 30px;
   height: 30px;
 }
+/* 데스크탑 헤더 메뉴 */
 #header .mymenu .menu {
   background: #78c2c2;
   border-radius: 20px 0 0 20px;
@@ -259,40 +260,74 @@ section .inner {
     left: 0;
     top: 0;
     bottom: auto;
-    transform: translate(0 , 0);
+    transform: translate(0, 0);
     width: 100%;
-    height: 50px;
     padding: 0 20px;
-    background: rgb(44, 155, 120, 0.8);
   }
-  #header .logo {
-    line-height: 50px;
-    font-size: 2.0rem;
-    font-weight: 700;
-    color: #fff;
+  #header .m_mymenu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
   }
-
-
-
-  #header .m_mymenu { display: block; }
-  #header .m_mymenu .m_menu {
+  /* 모바일 로고 */
+  #header .m_mymenu .logo .logo_motion {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform-origin: 50% 50%;
+    width: 100px;
+    height: 100px;
+    border: 7px solid transparent;
+    border-radius: 50%;
+    border-color: #78c2c2 #fff #fff #fff;
+    background: #2c9b78;
+  }
+  #header .m_mymenu .logo .logo_motion.on{ animation: rotate-loading 3s linear 0s infinite normal; }
+  #header .m_mymenu .logo .logo_txt {
+    position: absolute;
+    right: 20px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  #header .m_mymenu .m_menu>li { margin: 0 10px; }
-  #header .m_mymenu .m_menu>li>a {
-    display: inline-block;
-    line-height: 50px;
+    width: 100px;
+    line-height: 100px;
     font-size: 2.0rem;
     font-weight: 700;
+    color: #fff;
+    text-align: center;
+  } 
+  /* 모바일 로고 애니메이션 */
+  @keyframes rotate-loading {
+    0%  { transform: rotate(0deg);}
+    100%  { transform: rotate(360deg);}
+  }
+  /* 모바일 헤더 메뉴 */
+  #header .m_mymenu .m_menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    background: #78c2c2;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  #header .m_mymenu .m_menu>li>a {
+    display: inline-block;
+    padding: 15px 0px;
+    font-family: 'SBAggroB', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
     position: relative;
   }
   #header .m_mymenu .m_menu>li>a:after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 10px;
     transform: scaleX(0);
     width: 100%;
     height: 2px;
@@ -301,10 +336,18 @@ section .inner {
   #header .m_mymenu .m_menu>li>a:hover:after { 
     transform: scaleX(1);
     transition: all 0.5s;
-   }
-
-
-
+  }
+  #header .m_mymenu .m_menu .btn_close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 3%;
+    height: 30px;
+    border: none;
+    background: url(../images/btn_close.png) no-repeat 50% 50% / 100%;
+    text-indent: -9999px;
+  }
+  #header .m_mymenu .m_menu.on { transform: translateY(0%); }
 
   
   /* ========== 섹션 공통 ========== */

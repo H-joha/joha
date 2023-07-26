@@ -321,8 +321,16 @@
 /* ========== 모바일 분기점 ========== */
 @media (max-width: 768px) {
   /* 섹션 : 인트로 */
-  .main_intro .inner { padding: 20px 20px 20px; }
+  .main_intro .inner {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 20px 20px 20px;
+  }
   /* 소개문구 */
+  .main_intro .tit_wrap { width: 100%;}
   .main_intro .tit_wrap .txt { font-size: 1.2rem; }
   .main_intro .tit_wrap .txt:after {
     width: 50px;
@@ -336,16 +344,20 @@
     height: 150px;
   }
   /* 소개문구 */
-  .main_intro .txt_wrap { margin-top: 20px; }
+  .main_intro .txt_wrap {
+    width: 100%;
+    margin-top: 20px;
+  }
   .main_intro .txt_wrap br { display: block; }
   .main_intro .txt_wrap .tit { font-size: 1.8rem; }
   .main_intro .txt_wrap .txt {
     margin-bottom: 5px;
     font-size: 1.3rem;
   }
-
   /* 이력서 다운로드 */
-  .main_intro .btn_wrap { margin-top: 20px; }
+  .main_intro .btn_wrap { 
+    margin: 20px auto;
+  }
   .main_intro .btn_wrap .btn_download {
     padding: 5px 5px;
     border: 2px solid #fff;

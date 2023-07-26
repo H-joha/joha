@@ -339,10 +339,10 @@ section .inner {
   }
   #header .m_mymenu .m_menu .btn_close {
     position: absolute;
-    right: 20px;
-    top: 10px;
-    width: 3%;
-    height: 30px;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
     border: none;
     background: url(../images/btn_close.png) no-repeat 50% 50% / 100%;
     text-indent: -9999px;

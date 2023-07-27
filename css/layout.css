@@ -171,12 +171,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 .main_about .skill_wrap .circle .percent { 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   text-align: center;
 }
 .main_about .skill_wrap .circle .txt {
@@ -387,10 +389,9 @@
   }
   .main_about .tag_wrap .tit {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: 'SBAggroB', sans-serif;
     font-size: 1.5rem;
-    font-weight: 500;
     color: #78c2c2;
     position: relative;
   }
@@ -431,7 +432,7 @@
     height: 400px;
     margin: 50px auto 0;
   }
-  .main_about .skill_wrap .circle { 
+  .main_about .skill_wrap .circle {
     width: 50%;
     margin-bottom: 20px;
     text-align: center;

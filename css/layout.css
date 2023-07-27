@@ -365,7 +365,7 @@
 
 
   /* 섹션 : 프로필 */
-  .main_about { padding: 30px 0 30px; }
+  .main_about { padding: 50px 0; }
   /* 개인정보 */
   .main_about .about_wrap { 
     width: 100%;
@@ -426,7 +426,6 @@
   }
   /*  스킬 */
   .main_about .skill_wrap {
-    border: 1px solid red;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 400px;
@@ -441,7 +440,7 @@
 
 
   /* 섹션 : 프로젝트  */
-  .main_project { padding: 30px 0 30px; }
+  .main_project { padding: 50px 0; }
   /* 프로젝트 type */
   .main_project .type_list { 
     margin-bottom: 50px;

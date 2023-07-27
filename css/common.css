@@ -232,6 +232,7 @@ section .inner {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .main_tit {
   display: flex;
   justify-content: center;
@@ -241,7 +242,30 @@ section .inner {
   font-weight: 500;
   text-shadow: 2px 2px 5px #888;
 }
-
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+.main_tit .tit {
+  position: relative;
+  animation: bounce 0.3s ease infinite alternate;
+}
+.main_tit .tit:nth-child(1) { animation-delay: 0.1s; }
+.main_tit .tit:nth-child(2) { animation-delay: 0.2s; }
+.main_tit .tit:nth-child(3) { animation-delay: 0.3s; }
+.main_tit .tit:nth-child(4) { animation-delay: 0.4s; }
+.main_tit .tit:nth-child(5) { animation-delay: 0.5s; }
+.main_tit .tit:nth-child(6) { animation-delay: 0.6s; }
+.main_tit .tit:nth-child(7) { animation-delay: 0.7s; }
+.main_tit .tit:nth-child(8) { animation-delay: 0.6s; }
+.main_tit .tit:nth-child(9) { animation-delay: 0.5s; }
+.main_tit .tit:nth-child(10) { animation-delay: 0.4s; }
+.main_tit .tit:nth-child(11) { animation-delay: 0.3s; }
+.main_tit .tit:nth-child(12) { animation-delay: 0.2s; }
 
 
 /* ========== 타블렛 분기점 ========== */

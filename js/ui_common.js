@@ -33,29 +33,69 @@ $(function () {
   });
 
   // skill 애니메이션 효과
-  draw(91, '.circle01', '#A8A2E0');
-  draw(90, '.circle02', '#A8A2E0');
-  draw(64, '.circle03', '#A8A2E0');
-  draw(78, '.circle04', '#A8A2E0');
-  draw(40, '.circle05', '#A8A2E0');
+  // draw(91, '.circle01', '#A8A2E0');
+  // draw(90, '.circle02', '#A8A2E0');
+  // draw(64, '.circle03', '#A8A2E0');
+  // draw(78, '.circle04', '#A8A2E0');
+  // draw(40, '.circle05', '#A8A2E0');
 
-  function draw(max, classname, colorname) {
-    var i = 1;
+  // function draw(max, classname, colorname) {
+  //   var i = 1;
 
-    var func1 = setInterval(function () {
-      if (i < max) {
-        color1(i, classname, colorname);
-        i++;
-      } else {
-        clearInterval(func1);
-      }
-    }, 80);
-  }
-  function color1(i, classname, colorname) {
-    $(classname).css({
-      background: 'conic-gradient(' + colorname + ' 0% ' + i + '%, #ddd ' + i + '% 100%)',
-    });
-  }
+  //   var func1 = setInterval(function () {
+  //     if (i < max) {
+  //       color1(i, classname, colorname);
+  //       i++;
+  //     } else {
+  //       setInterval(func1);
+  //     }
+  //   }, 50);
+  // }
+
+  // function color1(i, classname, colorname) {
+  //   $(classname).css({
+  //     background: 'conic-gradient(' + colorname + ' 0% ' + i + '%, #ddd ' + i + '% 100%)',
+  //   });
+  // }
+
+  $(window).scroll(function () {
+    var skill = $('#skill').offset().top - 1000;
+
+    if ($(this).scrollTop() > skill) {
+      $('.circle01').easyPieChart({
+        barColor: '#A8A2E0',
+        trackColor: '#ddd',
+        scaleColor: false,
+        lineCap: 'square',
+        lineWidth: 20,
+        animate: 3000,
+      });
+      $('.circle02').easyPieChart({
+        barColor: '#A8A2E0',
+        trackColor: '#ddd',
+        scaleColor: false,
+        lineCap: 'square',
+        lineWidth: 20,
+        animate: 3000,
+      });
+      $('.circle03').easyPieChart({
+        barColor: '#A8A2E0',
+        trackColor: '#ddd',
+        scaleColor: false,
+        lineCap: 'square',
+        lineWidth: 20,
+        animate: 3000,
+      });
+      $('.circle04').easyPieChart({
+        barColor: '#A8A2E0',
+        trackColor: '#ddd',
+        scaleColor: false,
+        lineCap: 'square',
+        lineWidth: 20,
+        animate: 3000,
+      });
+    }
+  });
 
   // 프로젝트 tap
   $('.main_project .type_list .btn_type').on('click', function () {

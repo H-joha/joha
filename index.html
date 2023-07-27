@@ -16,12 +16,11 @@
   <link rel="apple-touch-icon" href="images/logo_jh.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;500;700;900&display=swap" >
   <link rel="stylesheet" href="css/jquery-ui.min.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="css/layout.css?v=<?php echo time(); ?>">
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.easypiechart.js"></script>
   <script src="js/ui_common.js?v=<?php echo time(); ?>" defer></script>
 </head>
   <body>
@@ -30,6 +29,7 @@
     </div>
     <div id="wrap">
       <header id="header">
+        <!-- 데스크탑 메뉴 -->
         <div class="mymenu">
           <ul class="menu">
             <li><a href="index.html">JOHA</a></li>
@@ -38,6 +38,7 @@
           </ul>
           <i class="ico_arrow"><img src="images/ico_arrow.png" alt="화살표"></i>
         </div>
+        <!-- 모바일 메뉴 -->
         <div class="m_mymenu">
           <h1 class="logo">
             <div class="logo_motion count_motion on"></div>
@@ -76,7 +77,15 @@
         </section>
         <!-- 프로필 -->
         <section class="main_about">
-          <h2 class="main_tit">PROFLIE</h2>
+          <h2 class="main_tit">
+            <span class="tit">P</span>
+            <span class="tit">R</span>
+            <span class="tit">O</span>
+            <span class="tit">F</span>
+            <span class="tit">L</span>
+            <span class="tit">I</span>
+            <span class="tit">E</span>
+          </h2>
           <div class="inner">
             <!-- 개인정보 -->
             <div class="about_wrap">
@@ -125,33 +134,50 @@
               </div>
             </div>
             <!-- 스킬 -->
-            <div class="skill_wrap">
-              <div class="skill">
-                <div class="circle circle01"><span class="center">91%</span></div>
-                <h3 class="tit">HTML</h3>
+            <div class="skill_wrap" id="skill">
+              <div class="circle circle01" data-percent="91">
+                <canvas></canvas>
+                <p class="percent">91%</p>
+                <canvas height="100" width="100" style="height: 100px; width: 100px;"></canvas>
+                <p class="txt">HTML</p>
               </div>
-              <div class="skill">
-                <div class="circle circle02"><span class="center">90%</span></div>
-                <h3 class="tit">CSS</h3>
+              <div class="circle circle02" data-percent="88">
+                <canvas></canvas>
+                <p class="percent">88%</p>
+                <canvas height="100" width="100" style="height: 100px; width: 100px;"></canvas>
+                <p class="txt">CSS</p>
               </div>
-              <div class="skill">
-                <div class="circle circle03"><span class="center">64%</span></div>
-                <h3 class="tit">JS</h3>
+              <div class="circle circle03" data-percent="70">
+                <canvas></canvas>
+                <p class="percent">68%</p>
+                <canvas height="100" width="100" style="height: 100px; width: 100px;"></canvas>
+                <p class="txt">JS</p>
               </div>
-              <div class="skill">
-                <div class="circle circle04"><span class="center">76%</span></div>
-                <h3 class="tit">JQ</h3>
-              </div>
-              <div class="skill">
-                <div class="circle circle05"><span class="center">40%</span></div>
-                <h3 class="tit">Ps</h3>
+              <div class="circle circle04" data-percent="40">
+                <canvas></canvas>
+                <p class="percent">40%</p>
+                <canvas height="100" width="100" style="height: 100px; width: 100px;"></canvas>
+                <p class="txt">Ps</p>
               </div>
             </div>
           </div>
         </section>
         <!-- 프로젝트 -->
         <section class="main_project">
-          <h2 class="main_tit">JOHA PROJECT</h2>
+          <h2 class="main_tit">
+            <span class="tit">J</span>
+            <span class="tit">O</span>
+            <span class="tit">H</span>
+            <span class="tit">A</span>
+            <span class="tit">&nbsp;</span>
+            <span class="tit">P</span>
+            <span class="tit">R</span>
+            <span class="tit">O</span>
+            <span class="tit">J</span>
+            <span class="tit">E</span>
+            <span class="tit">C</span>
+            <span class="tit">T</span>
+          </h2>
           <div class="inner">
             <div class="type_list">
               <button class="btn_type active" data-filter="*">All</button>

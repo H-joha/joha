@@ -280,8 +280,8 @@ section .inner {
     height: 100px;
     border: 7px solid transparent;
     border-radius: 50%;
-    border-color: #78c2c2 #fff #fff #fff;
-    background: #2c9b78;
+    border-color: #2c9b78 #fff #fff #fff;
+    background: #78c2c2;
   }
   #header .m_mymenu .logo .logo_motion.on{ animation: rotate-loading 3s linear 0s infinite normal; }
   #header .m_mymenu .logo .logo_txt {
